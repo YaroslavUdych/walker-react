@@ -1,0 +1,81 @@
+.trails-list-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	aspect-ratio: 3/2;
+}
+
+.trails-list-item:hover img {
+	transform: scale(1.1);
+	transition: all 0.3s ease-in-out;
+}
+.trails-list-item:not(:hover) img {
+	transform: scale(1);
+	transition: all 0.3s ease-in-out;
+}
+
+.trails-list-item-info {
+	display: flex;
+	gap: 10px;
+}
+.single-trail {
+	gap: 30px;
+}
+.single-trail-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translateY(20px);
+}
+.single-trail-info {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+.single-trail-slider {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translateY(-20px);
+	display: flex;
+	gap: 10px;
+}
+.single-trail-description {
+	padding: 0 90px;
+}
+.single-trail-map {
+	width: 50%;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.line {
+	width: 50%;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 515px) {
+	.trails-list-item {
+		flex-direction: column;
+		padding-top: 0;
+	}
+	.single-trail-slider {
+		flex-direction: column;
+	}
+	.single-trail-map {
+		width: 100%;
+		height: 300px;
+	}
+	.single-trail-description {
+		padding: 0;
+	}
+	.single-trail-info {
+		justify-content: space-between;
+	}
+}
